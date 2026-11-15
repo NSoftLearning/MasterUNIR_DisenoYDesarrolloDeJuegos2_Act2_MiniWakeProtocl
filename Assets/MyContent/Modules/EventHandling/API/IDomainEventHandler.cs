@@ -1,4 +1,7 @@
-public interface IDomainEventHandler<in T> where T : IDomainEvent
+namespace Modules.EventHandling.API
 {
-    void Handle (T DomainEvent);
+    public interface IDomainEventHandler<in T> where T : IDomainEvent
+    {
+        void Handle (T DomainEvent);
+    }
 }

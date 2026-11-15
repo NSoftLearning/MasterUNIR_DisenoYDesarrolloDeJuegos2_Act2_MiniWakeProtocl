@@ -1,21 +1,25 @@
 using MessagePipe;
+using Modules.EventHandling.API;
 using UnityEngine;
 using Zenject;
 
-[CreateAssetMenu(
-    fileName = "EventBusInstaller",
-    menuName = "Tools/Config/Modules/EventHandling")]
-public class EventBusInstaller :
-    ScriptableObjectInstaller<EventBusInstaller>
+namespace Modules.EventHandling.Private
 {
-    public override void InstallBindings()
+    [CreateAssetMenu(
+        fileName = "EventBusInstaller",
+        menuName = "Tools/Config/Modules/EventHandling")]
+    public class EventBusInstaller :
+        ScriptableObjectInstaller<EventBusInstaller>
     {
-        var options = Container.BindMessagePipe();
+        public override void InstallBindings()
+        {
+            var options = Container.BindMessagePipe();
 
-        Container.BindMessageBroker<IDomainEvent>(options);
+            Container.BindMessageBroker<IDomainEvent>(options);
 
-        Container.Bind<DomainEventBus>()
-            .To<MessagePipeDomainEventBus>()
-            .AsSingle();
+            Container.Bind<DomainEventBus>()
+                .To<MessagePipeDomainEventBus>()
+                .AsSingle();
+        }
     }
 }

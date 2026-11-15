@@ -1,28 +1,32 @@
 using System;
-using UnityEngine;
+using Modules.EventHandling;
+using Modules.EventHandling.API;
 
-public class EventBusTestEventRegisterer : IDisposable
+namespace PrototypesAndTests.Infra.EventBusTest
 {
-    private readonly DomainEventBus _domainEventbus;
-    private readonly IDomainEventHandler<EventBusGeneralTestEvent> _handler;
-
-    EventBusTestEventRegisterer (
-        DomainEventBus domainEventBus,
-        IDomainEventHandler<EventBusGeneralTestEvent> handler)
+    public class EventBusTestEventRegisterer : IDisposable
     {
-        _domainEventbus = domainEventBus;
-        _handler = handler;
+        private readonly DomainEventBus _domainEventbus;
+        private readonly IDomainEventHandler<EventBusGeneralTestEvent> _handler;
 
-        Register();
-    }
+        EventBusTestEventRegisterer (
+            DomainEventBus domainEventBus,
+            IDomainEventHandler<EventBusGeneralTestEvent> handler)
+        {
+            _domainEventbus = domainEventBus;
+            _handler = handler;
+
+            Register();
+        }
 
 
-    void Register ()
-    {
-        _domainEventbus.RegisterHandler<EventBusGeneralTestEvent>(_handler);
-    }
-    public void Dispose()
-    {
-        _domainEventbus.UnregisterHandler<EventBusGeneralTestEvent>(_handler);
+        void Register ()
+        {
+            _domainEventbus.RegisterHandler<EventBusGeneralTestEvent>(_handler);
+        }
+        public void Dispose()
+        {
+            _domainEventbus.UnregisterHandler<EventBusGeneralTestEvent>(_handler);
+        }
     }
 }

@@ -1,11 +1,11 @@
-using System.Collections;
-using UnityEngine;
-
-public interface DomainEventBus
+namespace Modules.EventHandling.API
 {
-    void Publish (IDomainEvent domainEvent);
+    public interface DomainEventBus
+    {
+        void Publish (IDomainEvent domainEvent);
 
-    void RegisterHandler<TEvent>(IDomainEventHandler<TEvent> handler) where TEvent : IDomainEvent;
-    void UnregisterHandler<TEvent>(IDomainEventHandler<TEvent> handler) where TEvent : IDomainEvent;
+        void RegisterHandler<TEvent>(IDomainEventHandler<TEvent> handler) where TEvent : IDomainEvent;
+        void UnregisterHandler<TEvent>(IDomainEventHandler<TEvent> handler) where TEvent : IDomainEvent;
    
+    }
 }

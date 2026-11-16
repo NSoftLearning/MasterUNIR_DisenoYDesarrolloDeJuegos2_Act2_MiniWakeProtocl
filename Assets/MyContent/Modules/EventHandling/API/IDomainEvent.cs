@@ -1,7 +1,8 @@
-using System;
-
-public interface IDomainEvent
+namespace Modules.EventHandling.API
 {
-    string Identifier { get; }
-    float Timestamp { get; }
+    public interface IDomainEvent
+    {
+        string Identifier { get; }
+        float Timestamp { get; }
+    }
 }

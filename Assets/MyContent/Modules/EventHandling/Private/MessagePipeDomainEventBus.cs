@@ -1,57 +1,61 @@
 using System;
 using System.Collections.Generic;
 using MessagePipe;
+using Modules.EventHandling.API;
 
-public class MessagePipeDomainEventBus : DomainEventBus
+namespace Modules.EventHandling.Private
 {
-    private readonly IPublisher<IDomainEvent> _publisher;
-    private readonly ISubscriber<IDomainEvent> _subscriber;
-
-    private readonly Dictionary<(Type, object), IDisposable> _subscriptions
-        = new Dictionary<(Type, object), IDisposable>();
-
-    public MessagePipeDomainEventBus(
-        IPublisher<IDomainEvent> publisher,
-        ISubscriber<IDomainEvent> subscriber)
+    public class MessagePipeDomainEventBus : DomainEventBus
     {
-        _publisher = publisher;
-        _subscriber = subscriber;
-    }
+        private readonly IPublisher<IDomainEvent> _publisher;
+        private readonly ISubscriber<IDomainEvent> _subscriber;
 
-    public void Publish(IDomainEvent domainEvent)
-    {
-        _publisher.Publish(domainEvent);
-    }
+        private readonly Dictionary<(Type, object), IDisposable> _subscriptions
+            = new Dictionary<(Type, object), IDisposable>();
 
-    public void RegisterHandler<TEvent>(
-        IDomainEventHandler<TEvent> handler)
-        where TEvent : IDomainEvent
-    {
-        var key = (typeof(TEvent), (object)handler);
+        public MessagePipeDomainEventBus(
+            IPublisher<IDomainEvent> publisher,
+            ISubscriber<IDomainEvent> subscriber)
+        {
+            _publisher = publisher;
+            _subscriber = subscriber;
+        }
+
+        public void Publish(IDomainEvent domainEvent)
+        {
+            _publisher.Publish(domainEvent);
+        }
+
+        public void RegisterHandler<TEvent>(
+            IDomainEventHandler<TEvent> handler)
+            where TEvent : IDomainEvent
+        {
+            var key = (typeof(TEvent), (object)handler);
 
         
-        if (_subscriptions.ContainsKey(key))
-            return;
+            if (_subscriptions.ContainsKey(key))
+                return;
 
-        var subscription = _subscriber.Subscribe(domainEvent =>
+            var subscription = _subscriber.Subscribe(domainEvent =>
+            {
+                if (domainEvent is TEvent typedEvent)
+                    handler.Handle(typedEvent);
+            });
+
+            _subscriptions.Add(key, subscription);
+        }
+
+        public void UnregisterHandler<TEvent>(
+            IDomainEventHandler<TEvent> handler)
+            where TEvent : IDomainEvent
         {
-            if (domainEvent is TEvent typedEvent)
-                handler.Handle(typedEvent);
-        });
+            var key = (typeof(TEvent), (object)handler);
 
-        _subscriptions.Add(key, subscription);
-    }
+            if (!_subscriptions.TryGetValue(key, out var subscription))
+                return;
 
-    public void UnregisterHandler<TEvent>(
-        IDomainEventHandler<TEvent> handler)
-        where TEvent : IDomainEvent
-    {
-        var key = (typeof(TEvent), (object)handler);
-
-        if (!_subscriptions.TryGetValue(key, out var subscription))
-            return;
-
-        subscription.Dispose();
-        _subscriptions.Remove(key);
+            subscription.Dispose();
+            _subscriptions.Remove(key);
+        }
     }
 }

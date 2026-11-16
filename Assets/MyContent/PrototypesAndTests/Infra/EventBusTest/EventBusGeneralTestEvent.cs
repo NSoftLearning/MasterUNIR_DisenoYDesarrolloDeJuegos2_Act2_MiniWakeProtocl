@@ -1,28 +1,31 @@
-using System;
 using System.Text;
-using UnityEngine;
+using Modules.EventHandling;
+using Modules.EventHandling.API;
 
-public class EventBusGeneralTestEvent : DomainEventBase
+namespace PrototypesAndTests.Infra.EventBusTest
 {
-    public readonly string SamplePayload;
-
-    public EventBusGeneralTestEvent (string samplePayload)
+    public class EventBusGeneralTestEvent : DomainEventBase
     {
-        SamplePayload = samplePayload;
-    }
+        public readonly string SamplePayload;
 
-    public override string ToString()
-    {
+        public EventBusGeneralTestEvent (string samplePayload)
+        {
+            SamplePayload = samplePayload;
+        }
 
-        var stringBuilder = new StringBuilder("nameof");
+        public override string ToString()
+        {
 
-        stringBuilder.Append("[");
-        stringBuilder.Append("DOMAIN EVENT");
-        stringBuilder.Append("]");
-        stringBuilder.Append(nameof(EventBusGeneralTestEvent));
-        stringBuilder.Append($"SamplePayload: {SamplePayload}");
+            var stringBuilder = new StringBuilder("nameof");
 
-        return stringBuilder.ToString();
+            stringBuilder.Append("[");
+            stringBuilder.Append("DOMAIN EVENT");
+            stringBuilder.Append("]");
+            stringBuilder.Append(nameof(EventBusGeneralTestEvent));
+            stringBuilder.Append($"SamplePayload: {SamplePayload}");
 
+            return stringBuilder.ToString();
+
+        }
     }
 }

@@ -1,9 +1,14 @@
+using Modules.EventHandling;
+using Modules.EventHandling.API;
 using UnityEngine;
 
-public class EventBusGeneralTestEventHandler : IDomainEventHandler<EventBusGeneralTestEvent>
+namespace PrototypesAndTests.Infra.EventBusTest
 {
-    public void Handle(EventBusGeneralTestEvent DomainEvent)
+    public class EventBusGeneralTestEventHandler : IDomainEventHandler<EventBusGeneralTestEvent>
     {
-        Debug.Log("EVENT HANDLED WITH PAYLOAD " + DomainEvent.SamplePayload);
+        public void Handle(EventBusGeneralTestEvent DomainEvent)
+        {
+            Debug.Log("EVENT HANDLED WITH PAYLOAD " + DomainEvent.SamplePayload);
+        }
     }
 }

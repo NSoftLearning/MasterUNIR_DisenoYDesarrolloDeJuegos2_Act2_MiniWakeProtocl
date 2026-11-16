@@ -57,6 +57,9 @@ namespace Modules.Inventory.Private
 
         private void Confirm(InputAction.CallbackContext obj)
         {
+            if (!_isOpened)
+                return;
+            
             _inventory.Equip(SelectedItem);
             Close();
         }
@@ -116,13 +119,18 @@ namespace Modules.Inventory.Private
             if (!_isOpened)
                 return;
 
+            ResetView();
+
+            _eventBus.Publish(new InventoryClosed());
+        }
+
+        private void ResetView()
+        {
             _isOpened = false;
             DisableNavigation();
             inventoryPanel.SetActive(false);
 
             ClearPreview();
-        
-            _eventBus.Publish(new InventoryClosed());
         }
 
         private void EnableNavigation()
@@ -175,7 +183,7 @@ namespace Modules.Inventory.Private
             toggleInventory.action.performed += ToggleInventory;
             previousItem.action.performed += PreviousItem;
             nextItem.action.performed += NextItem;
-            confirm.action.performed += Confirm;
+            confirm.action.canceled += Confirm;
             cancel.action.performed += Cancel;
 
             toggleInventory.action.Enable();
@@ -186,11 +194,11 @@ namespace Modules.Inventory.Private
             toggleInventory.action.performed -= ToggleInventory;
             previousItem.action.performed -= PreviousItem;
             nextItem.action.performed -= NextItem;
-            confirm.action.performed -= Confirm;
+            confirm.action.canceled -= Confirm;
             cancel.action.performed -= Cancel;
 
             toggleInventory.action.Disable();
-            Close();
+            ResetView();
         }
     }
 }

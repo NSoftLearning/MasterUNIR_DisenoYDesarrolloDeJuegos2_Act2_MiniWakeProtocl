@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2e6d87b92f47ae95a41c02fc898254, type: 3}
+  m_Name: BasicKeycard
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.API.ItemDefinition
+  id: 
+  displayName: Tarjeta de identificacion
+  modelPrefab: {fileID: 7530526713456951702, guid: 482f9959828c56540bdeb079102fa7cd, type: 3}

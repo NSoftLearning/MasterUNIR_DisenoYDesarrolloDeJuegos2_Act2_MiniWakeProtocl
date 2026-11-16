@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Modules.EventHandling.API;
 using Modules.Inventory.API;
 
 namespace Modules.Inventory.Private
@@ -6,13 +7,16 @@ namespace Modules.Inventory.Private
     public class Inventory : IInventory
     {
         private readonly List<ItemDefinition> _items = new();
-        
+        private readonly DomainEventBus _eventBus;
+
         public IReadOnlyList<ItemDefinition> items { get; }
         public ItemDefinition EquippedItem { get; private set; }
-
-        public Inventory ()
+        
+        
+        public Inventory (DomainEventBus eventBus)
         {
             items = _items.AsReadOnly();
+            _eventBus = eventBus;
         }
         
         public void Add(ItemDefinition item)
@@ -31,7 +35,7 @@ namespace Modules.Inventory.Private
                 throw new InventoryException("Item does not exist");
 
             if (EquippedItem == item)
-                EquippedItem = null;
+                Equip(null);
         }
 
         public void Equip(ItemDefinition item)
@@ -40,6 +44,8 @@ namespace Modules.Inventory.Private
                 throw new InventoryException("Item does not exist");
 
             EquippedItem = item;
+
+            _eventBus.Publish(new EquippedItemChanged(item));
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using Modules.Interaction.API;
 using Modules.Inventory.API;
 using UnityEngine;
@@ -5,40 +6,41 @@ using Zenject;
 
 namespace Modules.Inventory.Private
 {
-    public class PickupInteractable : MonoBehaviour, IInteractable
+    public class PickupInteraction : MonoBehaviour, IInteractableReadData
     {
 
         [SerializeField] private ItemDefinition item;
 
         private IInventory _inventory;
+        private IInteractable _interactable;
+
         public string InteractionPrompt => $"Recoger {item.DisplayName}";
-    
+
         [Inject]
         private void Construct(IInventory inventory)
         {
             _inventory = inventory;
         }
-    
-        public void Select()
+
+        private void Awake()
         {
+            _interactable = GetComponent<IInteractable>();
         }
 
-        public void Unselect()
+        private void OnEnable()
         {
+            _interactable.InteractionStarted += PickUp;
         }
 
-        public void StartInteraction()
+        private void OnDisable()
+        {
+            _interactable.InteractionStarted -= PickUp;
+        }
+
+        private void PickUp()
         {
             _inventory.Add(item);
-            Debug.Log(
-                $"Picked:  {item.DisplayName} Objects in inventory {_inventory.items.Count}", this);
-
             gameObject.SetActive(false);
-        }
-
-        public void StopInteration()
-        {
-     
         }
     }
 }

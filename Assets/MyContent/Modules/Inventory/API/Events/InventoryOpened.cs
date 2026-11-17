@@ -4,6 +4,8 @@ namespace Modules.Inventory.API
 {
     public class InventoryOpened : DomainEventBase
     {
-        
+        public InventoryOpened(object source) : base(source)
+        {
+        }
     }
 }

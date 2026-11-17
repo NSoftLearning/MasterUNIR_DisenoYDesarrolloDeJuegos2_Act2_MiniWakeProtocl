@@ -99,7 +99,7 @@ namespace Modules.Inventory.Private
             RefreshView();
             inventoryPanel.SetActive(true);
 
-            _eventBus.Publish(new InventoryOpened());
+            _eventBus.Publish(new InventoryOpened(this));
             EnableNavigation();
         }
 
@@ -121,7 +121,7 @@ namespace Modules.Inventory.Private
 
             ResetView();
 
-            _eventBus.Publish(new InventoryClosed());
+            _eventBus.Publish(new InventoryClosed(this));
         }
 
         private void ResetView()

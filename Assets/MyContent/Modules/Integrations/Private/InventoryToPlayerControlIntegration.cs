@@ -13,14 +13,14 @@ namespace Modules.Integrations.Private
         IDomainEventHandler<InventoryClosed>
     {
         private readonly DomainEventBus _eventBus;
-        private readonly IPlayerControl _playerControl;
+        private readonly IPlayerControlBlocker _controlBlocker;
 
         public InventoryToPlayerControlIntegration(
             DomainEventBus eventBus,
-            IPlayerControl playerControl)
+            IPlayerControlBlocker controlBlocker)
         {
             _eventBus = eventBus;
-            _playerControl = playerControl;
+            _controlBlocker = controlBlocker;
         }
 
         public void Initialize()
@@ -31,12 +31,12 @@ namespace Modules.Integrations.Private
 
         public void Handle(InventoryOpened domainEvent)
         {
-            _playerControl.DisableControl();
+            _controlBlocker.BlockControl(domainEvent.Source);
         }
 
         public void Handle(InventoryClosed domainEvent)
         {
-            _playerControl.EnableControl();
+            _controlBlocker.ReleaseControl(domainEvent.Source);
         }
 
         public void Dispose()

@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 5420857361349278248}
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 5760285568071214781}
+  - component: {fileID: 497406006585265570}
   m_Layer: 8
   m_Name: PlayerCapsule_Custom
   m_TagString: Player
@@ -388,3 +389,15 @@ MonoBehaviour:
   controller: {fileID: 8616685848737228371}
   inputs: {fileID: 5420857361349278248}
   playerInput: {fileID: 8616685848737228376}
+--- !u!114 &497406006585265570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02250496a554de2ac02834e576d03de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.PlayerControl.API.PlayerEntity

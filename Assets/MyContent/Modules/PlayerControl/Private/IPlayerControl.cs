@@ -1,4 +1,4 @@
-namespace Modules.PlayerControl.API
+namespace Modules.PlayerControl.Private
 {
     public interface IPlayerControl
     {

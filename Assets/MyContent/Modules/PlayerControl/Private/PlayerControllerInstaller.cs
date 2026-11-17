@@ -16,6 +16,10 @@ namespace Modules.PlayerControl.Private
                 .To<StarterAssetsPlayerControl>()
                 .FromComponentInHierarchy()
                 .AsSingle();
+            
+            Container.Bind<IPlayerControlBlocker>()
+                .To<PlayerControlBlocker>()
+                .AsSingle();
         }
     }
 }

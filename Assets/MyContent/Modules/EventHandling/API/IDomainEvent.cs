@@ -4,5 +4,6 @@ namespace Modules.EventHandling.API
     {
         string Identifier { get; }
         float Timestamp { get; }
+        object Source { get; }
     }
 }

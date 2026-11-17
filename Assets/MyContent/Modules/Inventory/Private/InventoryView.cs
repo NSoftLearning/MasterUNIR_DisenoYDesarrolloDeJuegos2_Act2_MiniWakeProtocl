@@ -167,7 +167,14 @@ namespace Modules.Inventory.Private
             _previewModel.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(60, 0, 0));
 
             SetPreviewLayer(_previewModel.transform);
+            DisablePreviewColliders(_previewModel.transform);
+        }
 
+        private void DisablePreviewColliders(Transform target)
+        {
+            foreach (Collider child in target.GetComponentsInChildren<Collider>(true))
+                child.enabled = false;
+                
         }
 
         private void SetPreviewLayer(Transform target)

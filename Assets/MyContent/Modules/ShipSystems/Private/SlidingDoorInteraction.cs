@@ -1,9 +1,11 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
+using Modules.Interaction.API;
 using UnityEngine;
 
 namespace Modules.ShipSystems.Private
 {
-    public class SlidingDoorInteraction : MonoBehaviour
+    public class SlidingDoorInteraction : MonoBehaviour, IInteractableReadData
     {
         [SerializeField] private Transform leftPanel;
         [SerializeField] private Transform rightPanel;
@@ -12,9 +14,12 @@ namespace Modules.ShipSystems.Private
         [SerializeField, Min(0.01f)] private float openingDuration = 1f;
 
         private Sequence _movement;
-
+        private IInteractable _interactable;
+        public string InteractionPrompt => "Abrir puerta";
         private void Awake()
         {
+            _interactable = GetComponent<IInteractable>();
+            
             Vector3 leftTarget =
                 leftPanel.localPosition + Vector3.left * openingDistance;
 
@@ -42,8 +47,14 @@ namespace Modules.ShipSystems.Private
             _movement.PlayBackwards();
         }
 
+        private void OnEnable()
+        { 
+            _interactable.InteractionStarted += Open;
+        }
+
         private void OnDisable()
         {
+            _interactable.InteractionStarted -= Open;
             _movement?.Pause();
         }
 
@@ -51,5 +62,7 @@ namespace Modules.ShipSystems.Private
         {
             _movement?.Kill();
         }
+
+        
     }
 }

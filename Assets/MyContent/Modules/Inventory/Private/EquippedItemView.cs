@@ -36,6 +36,9 @@ namespace Modules.Inventory.Private
             _model.transform.SetLocalPositionAndRotation(
                 item.EquippedPositionOffset, 
                 Quaternion.Euler(item.EquippedRotationOffset));
+            
+            foreach (Collider collider in _model.GetComponentsInChildren<Collider>(true))
+                collider.enabled = false;
         }
 
         private void ClearModel ()

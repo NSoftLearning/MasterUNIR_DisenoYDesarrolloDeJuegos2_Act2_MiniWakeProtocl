@@ -384,6 +384,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Narrative",
+            "id": "a4623447-543b-4592-b61b-abb2b1906c2a",
+            "actions": [
+                {
+                    "name": "AdvanceNarrative",
+                    "type": "Button",
+                    "id": "3335e5a4-11b4-4ad1-896d-6d13f6f50edf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "beb9b656-d271-46db-8e49-b5ee002e423d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdvanceNarrative",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68d2cd16-5231-4470-bd95-52e3e26bc8d1",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdvanceNarrative",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

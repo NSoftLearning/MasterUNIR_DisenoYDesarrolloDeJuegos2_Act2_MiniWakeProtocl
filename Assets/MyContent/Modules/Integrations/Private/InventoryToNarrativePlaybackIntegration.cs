@@ -1,26 +1,26 @@
 ﻿using System;
 using Modules.EventHandling.API;
-using Modules.Interaction.API;
 using Modules.Inventory.API;
+using Modules.NarrativePlayback.API;
 using Zenject;
 
 namespace Modules.Integrations.Private
 {
-    public class InventoryToInteractionIntegration :
+    public class InventoryToNarrativePlaybackIntegration :
         IInitializable,
         IDisposable,
         IDomainEventHandler<InventoryOpened>,
         IDomainEventHandler<InventoryClosed>
     {
         private readonly DomainEventBus _eventBus;
-        private readonly IInteractionControl _interactionControl;
+        private readonly INarrativePlaybackControl _playback;
 
-        public InventoryToInteractionIntegration(
+        public InventoryToNarrativePlaybackIntegration(
             DomainEventBus eventBus,
-            IInteractionControl interactionControl)
+            INarrativePlaybackControl playback)
         {
             _eventBus = eventBus;
-            _interactionControl = interactionControl;
+            _playback = playback;
         }
 
         public void Initialize()
@@ -31,12 +31,12 @@ namespace Modules.Integrations.Private
 
         public void Handle(InventoryOpened domainEvent)
         {
-            _interactionControl.DisableInteraction();
+            _playback.SuspendPlayback();
         }
 
         public void Handle(InventoryClosed domainEvent)
         {
-            _interactionControl.EnableInteraction();
+            _playback.ResumePlayback();
         }
 
         public void Dispose()

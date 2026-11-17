@@ -17,7 +17,17 @@ namespace Modules.Integrations.Private
                 .NonLazy();
             
             Container
-                .BindInterfacesTo<InventoryToInteractionIntegration>()
+                .BindInterfacesTo<PlayerControlToInteractionIntegration>()
+                .AsSingle()
+                .NonLazy();
+            
+            Container
+                .BindInterfacesTo<NarrativeToPlayerControlIntegration>()
+                .AsSingle()
+                .NonLazy();
+            
+            Container
+                .BindInterfacesTo<InventoryToNarrativePlaybackIntegration>()
                 .AsSingle()
                 .NonLazy();
         }

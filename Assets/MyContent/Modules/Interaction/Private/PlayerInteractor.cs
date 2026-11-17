@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Modules.Interaction.Private
 {
-    public class PlayerInteractor : MonoBehaviour
+    public class PlayerInteractor : MonoBehaviour, IInteractionControl
     {
         [SerializeField] private Camera interactionCamera;
         [SerializeField, Min(0f)] private float maxDistance = 2.5f;
@@ -18,7 +18,6 @@ namespace Modules.Interaction.Private
         private IInteractable _selectedInteractable;
         private bool _isInteracting;
         private DomainEventBus _eventBus;
-        
         private readonly Vector3 _originInViewport =
             new (0.5f, 0.5f, 0f);
 
@@ -122,6 +121,16 @@ namespace Modules.Interaction.Private
         {
             ClearSelection();
             interactAction.action.Disable();
+        }
+
+        public void EnableInteraction()
+        {
+            enabled = true;
+        }
+
+        public void DisableInteraction()
+        {
+            enabled = false;
         }
     }
 }

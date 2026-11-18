@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2e6d87b92f47ae95a41c02fc898254, type: 3}
-  m_Name: BasicKeycard
+  m_Name: BasicKeycardGreen
   m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.API.ItemDefinition
   id: 
   displayName: Tarjeta de identificacion

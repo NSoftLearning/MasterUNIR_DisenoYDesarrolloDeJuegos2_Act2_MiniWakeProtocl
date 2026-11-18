@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7eba14b8faba8044a44b132f5a1e537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupInteractable
-  item: {fileID: 11400000, guid: d2d80f27b5c472b4f9c891e918527893, type: 2}
+  item: {fileID: 11400000, guid: e75dc4c84079aa847a6277abf4a37701, type: 2}
 --- !u!1001 &5286840601026657874
 PrefabInstance:
   m_ObjectHideFlags: 0

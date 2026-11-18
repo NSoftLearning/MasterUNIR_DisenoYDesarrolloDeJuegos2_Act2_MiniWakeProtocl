@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3957418956059599734}
   - component: {fileID: 8951508672748625470}
   - component: {fileID: 1810434747358018377}
+  - component: {fileID: 4140886968386586167}
   m_Layer: 0
   m_Name: BasicKeycardCaptainPickup
   m_TagString: Untagged
@@ -60,6 +61,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupInteractable
   item: {fileID: 11400000, guid: d2d80f27b5c472b4f9c891e918527893, type: 2}
+--- !u!65 &4140886968386586167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804629353597729551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25166255, y: 0.079646766, z: 0.17746606}
+  m_Center: {x: 0.00020636414, y: 0.015904728, z: 0.000334016}
 --- !u!1001 &187749569285544821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,7 +134,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicKeycardCapitanVisual
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1573243154506199025, guid: ce124d8cb863bd740bc111d3e615ff10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -110,7 +110,7 @@ namespace Modules.Inventory.Private
             itemName.text = item == null
                 ? "Mano vacía"
                 : item.DisplayName;
-
+            
             RefreshPreview(item);
         }
 
@@ -164,6 +164,7 @@ namespace Modules.Inventory.Private
             if (item == null)
                 return;
             _previewModel = Instantiate(item.ModelPrefab, _previewRig.ModelAnchor, false);
+            _previewModel.transform.localScale *= item.InventoryPreviewScale;
             _previewModel.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(60, 0, 0));
 
             SetPreviewLayer(_previewModel.transform);

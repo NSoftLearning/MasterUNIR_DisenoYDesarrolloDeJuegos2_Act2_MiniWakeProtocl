@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6060832cc94c388f2b6d634a4eb1a5, type: 3}
+  m_Name: PressureMessage
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
+  lines:
+  - speaker: Computadora
+    text: Peligro, pasillo despresurizado.
+    duration: 3
+    nameColor: {r: 0.9716981, g: 0.3987629, b: 0.3987629, a: 1}
+  - speaker: Computadora
+    text: "El acceso permanecer\xE1 cerrado hasta que se igua\nle la presi\xF3n."
+    duration: 4
+    nameColor: {r: 0.9716981, g: 0.3987629, b: 0.3987629, a: 1}
+  blockPlayerControl: 0

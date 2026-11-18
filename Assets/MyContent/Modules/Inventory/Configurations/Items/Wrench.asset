@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2e6d87b92f47ae95a41c02fc898254, type: 3}
-  m_Name: BasicKeycard
+  m_Name: Wrench
   m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.API.ItemDefinition
-  id: 
-  displayName: Tarjeta de identificacion
-  modelPrefab: {fileID: 7530526713456951702, guid: 482f9959828c56540bdeb079102fa7cd, type: 3}
+  displayName: Llave inglesa
+  modelPrefab: {fileID: 5429536073356872848, guid: f332105512e7d8f43bd93fc0c28ef8fd, type: 3}
+  equippedPositionOffset: {x: -0.001, y: -0.141, z: -0.05}
+  equippedRotationOffset: {x: 31.932787, y: 297.70825, z: 314.5676}
+  inventoryPreviewScale: 0.2

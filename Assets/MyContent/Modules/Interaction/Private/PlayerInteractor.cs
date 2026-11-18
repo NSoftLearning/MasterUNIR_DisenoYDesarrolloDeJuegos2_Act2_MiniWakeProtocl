@@ -48,7 +48,10 @@ namespace Modules.Interaction.Private
         private IInteractable FindTarget()
         {
             Ray ray = interactionCamera.ViewportPointToRay(_originInViewport);
-
+            Debug.DrawRay(
+                ray.origin,
+                ray.direction * maxDistance,
+                Color.yellow);
             if (!Physics.Raycast(
                     ray,
                     out RaycastHit hit,
@@ -99,6 +102,9 @@ namespace Modules.Interaction.Private
 
             _isInteracting = true;
             _selectedInteractable.StartInteraction();
+            
+            if (_selectedInteractable == null)
+              return;
             
             _eventBus.Publish(
                 new InteractableSelected(_selectedInteractable));

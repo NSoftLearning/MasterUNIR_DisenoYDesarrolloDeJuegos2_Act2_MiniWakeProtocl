@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6060832cc94c388f2b6d634a4eb1a5, type: 3}
+  m_Name: TuboPresion
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
+  lines:
+  - speaker: Jayden
+    text: "Es el conducto de ventilaci\xF3n del siguiente pasillo"
+    duration: 3
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "\xA1La presi\xF3n est\xE1 a punto de hacerlo reventar!"
+    duration: 3
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  blockPlayerControl: 1

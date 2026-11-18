@@ -103,6 +103,9 @@ namespace Modules.Interaction.Private
             _isInteracting = true;
             _selectedInteractable.StartInteraction();
             
+            if (_selectedInteractable == null)
+              return;
+            
             _eventBus.Publish(
                 new InteractableSelected(_selectedInteractable));
         }

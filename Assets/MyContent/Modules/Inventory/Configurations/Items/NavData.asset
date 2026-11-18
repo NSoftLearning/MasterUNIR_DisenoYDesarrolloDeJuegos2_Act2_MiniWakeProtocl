@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.API.ItemDefinition
   displayName: Datos de navegacion
   modelPrefab: {fileID: 8713290667734368292, guid: 9d07134166b937247ab0c70e48d2a88f, type: 3}
-  equippedPositionOffset: {x: 0.116, y: -0.126, z: 0.128}
-  equippedRotationOffset: {x: 334.43008, y: 187.34811, z: 148.57916}
-  inventoryPreviewScale: 0.2
+  equippedPositionOffset: {x: 0.021, y: -0.024, z: 0.167}
+  equippedRotationOffset: {x: 324.7325, y: 327.30664, z: 27.468788}
+  inventoryPreviewScale: 0.75

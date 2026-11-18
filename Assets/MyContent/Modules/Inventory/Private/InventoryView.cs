@@ -96,6 +96,11 @@ namespace Modules.Inventory.Private
         {
             _isOpened = true;
 
+            _selectedIndex = Mathf.Clamp(
+                _selectedIndex,
+                0,
+                _inventory.items.Count);
+            
             RefreshView();
             inventoryPanel.SetActive(true);
 

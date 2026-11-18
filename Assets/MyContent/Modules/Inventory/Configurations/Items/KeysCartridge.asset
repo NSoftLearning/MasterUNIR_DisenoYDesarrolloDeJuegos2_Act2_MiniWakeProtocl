@@ -15,5 +15,5 @@ MonoBehaviour:
   displayName: Cartucho de claves
   modelPrefab: {fileID: 8662389052844158992, guid: f53b3dc495c59be43917264e7e908d21, type: 3}
   equippedPositionOffset: {x: -0.0626, y: 0.0079, z: 0.0981}
-  equippedRotationOffset: {x: 321.24286, y: 247.47787, z: 19.86928}
+  equippedRotationOffset: {x: 329.15207, y: 351.4454, z: 48.852665}
   inventoryPreviewScale: 1

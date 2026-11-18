@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2e6d87b92f47ae95a41c02fc898254, type: 3}
-  m_Name: BasicKeycardGreen
+  m_Name: BasicKeycardJayden
   m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.API.ItemDefinition
-  displayName: Tarjeta de identificacion verde
+  displayName: Tarjeta de identificacion de Jayden
   modelPrefab: {fileID: 7530526713456951702, guid: 482f9959828c56540bdeb079102fa7cd, type: 3}
-  equippedPositionOffset: {x: 0, y: 0, z: 0}
-  equippedRotationOffset: {x: 0, y: 0, z: 0}
+  equippedPositionOffset: {x: -0.0416, y: 0.0023, z: 0.0227}
+  equippedRotationOffset: {x: 7.0430455, y: 257.76196, z: 25.75716}
+  inventoryPreviewScale: 1

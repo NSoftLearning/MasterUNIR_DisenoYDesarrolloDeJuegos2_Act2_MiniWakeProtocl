@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2e6d87b92f47ae95a41c02fc898254, type: 3}
   m_Name: BasicKeycardGreen
   m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.API.ItemDefinition
-  id: 
-  displayName: Tarjeta de identificacion
+  displayName: Tarjeta de identificacion verde
   modelPrefab: {fileID: 7530526713456951702, guid: 482f9959828c56540bdeb079102fa7cd, type: 3}
+  equippedPositionOffset: {x: 0, y: 0, z: 0}
+  equippedRotationOffset: {x: 0, y: 0, z: 0}

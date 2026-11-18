@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Modules.Interaction.API;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Modules.ShipSystems.Private
 {
@@ -15,6 +16,8 @@ namespace Modules.ShipSystems.Private
         [SerializeField] private List<Translation> translations = new();
         [SerializeField] private List<Rotation> rotations = new();
 
+        [SerializeField] private UnityEvent activated;
+        [SerializeField] private UnityEvent deactivated;
         private readonly List<Tween> _tweens = new();
 
         private IInteractable _interactable;
@@ -76,6 +79,8 @@ namespace Modules.ShipSystems.Private
 
             foreach (Tween tween in _tweens)
                 tween.PlayForward();
+            
+            activated.Invoke();
         }
 
         public void Deactivate()
@@ -84,6 +89,7 @@ namespace Modules.ShipSystems.Private
 
             foreach (Tween tween in _tweens)
                 tween.PlayBackwards();
+            deactivated.Invoke();
         }
 
 

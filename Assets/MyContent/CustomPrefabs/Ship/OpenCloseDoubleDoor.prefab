@@ -361,6 +361,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5252454763629282811}
     m_Modifications:
     - target: {fileID: 5294559593401457267, guid: 157d2d4dda0e99f4bbce45965b21a198, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294559593401457267, guid: 157d2d4dda0e99f4bbce45965b21a198, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cbfe6b195ad5d6d40aa8d6fffa1d3a01, type: 2}
@@ -433,6 +437,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4982050861291468193, guid: 9642e8ab16babb74487f9a07b2fddd38, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982050861291468193, guid: 9642e8ab16babb74487f9a07b2fddd38, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5819120427c4a6c43a2809fe22336be6, type: 2}
@@ -482,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6783318983179981940, guid: 9642e8ab16babb74487f9a07b2fddd38, type: 3}
       propertyPath: m_Name
-      value: SM_Bld_Wall_45_Frame_01 (13) Variant
+      value: OpenCloseDoubleDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7974534044174899483, guid: 9642e8ab16babb74487f9a07b2fddd38, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -12,7 +12,9 @@ namespace Modules.NarrativePlayback.Private
     {
         public override void InstallBindings()
         {
-            Container.Bind<INarrativePlaybackControl>()
+            Container.Bind(
+                    typeof(INarrativePlaybackControl),
+                    typeof(IManualNarrativePlaybackControl))
                 .To<NarrativeView>()
                 .FromComponentInHierarchy()
                 .AsSingle();

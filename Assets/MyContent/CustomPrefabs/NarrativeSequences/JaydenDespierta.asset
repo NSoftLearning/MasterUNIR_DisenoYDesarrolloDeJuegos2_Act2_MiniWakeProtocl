@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6060832cc94c388f2b6d634a4eb1a5, type: 3}
+  m_Name: JaydenDespierta
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
+  lines:
+  - speaker: Jayden
+    text: "Uf\u2026 Otra vez ese fr\xEDo en los huesos. Odio despertar de criogenia."
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "\xBFDoctor? \u2026\xBFYa puedo salir de la c\xE1psula?"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "\xBFHola? Deber\xEDa haber alguien supervisando mi despertar\u2026"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "Espera\u2026 \xBFQu\xE9 pone en las pantallas?"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "Colisi\xF3n inminente. Capit\xE1n Emerson, acuda al puente. Correcci\xF3n
+      de rumbo requerida\u201D"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "\xBFColisi\xF3n? \xBFCu\xE1nto tiempo lleva apareciendo ese aviso?"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "Tengo que encontrar al capit\xE1n. Lo buscar\xE9 en el puente.\n"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  blockPlayerControl: 1

@@ -1,5 +1,6 @@
 ﻿using System;
 using Modules.Core.API;
+using Modules.Core.API.Events;
 using Modules.Core.Exceptions;
 using Modules.EventHandling.API;
 using Modules.Interaction.API;

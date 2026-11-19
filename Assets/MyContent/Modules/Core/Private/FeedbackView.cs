@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using Modules.Core.API;
+using Modules.Core.API.Events;
 using Modules.EventHandling.API;
 using TMPro;
 using UnityEngine;

@@ -30,7 +30,7 @@ MonoBehaviour:
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden
-    text: "Colisi\xF3n inminente. Capit\xE1n Emerson, acuda al puente. Correcci\xF3n
+    text: "\"Colisi\xF3n inminente. Capit\xE1n Emerson, acuda al puente. Correcci\xF3n
       de rumbo requerida\u201D"
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}

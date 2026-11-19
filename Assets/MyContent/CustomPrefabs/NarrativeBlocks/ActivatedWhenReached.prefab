@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7246420357073920346}
   - component: {fileID: 5524304409820741449}
   m_Layer: 0
-  m_Name: CryobayTrigger1
+  m_Name: ActivatedWhenReached
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f19b889cc655d418d5ddf6c4a493a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.Private.NarrativeStarter
-  sequence: {fileID: 11400000, guid: ac372e4db74db2f4bbb232ea6844aceb, type: 2}
+  sequence: {fileID: 0}

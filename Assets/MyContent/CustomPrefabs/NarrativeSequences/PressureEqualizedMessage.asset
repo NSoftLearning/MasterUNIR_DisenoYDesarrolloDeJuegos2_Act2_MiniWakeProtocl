@@ -17,4 +17,4 @@ MonoBehaviour:
     text: "Presi\xF3n igualada, apertura autorizada"
     duration: 3
     nameColor: {r: 0.9716981, g: 0.3987629, b: 0.3987629, a: 1}
-  blockPlayerControl: 0
+  blockPlayerControl: 1

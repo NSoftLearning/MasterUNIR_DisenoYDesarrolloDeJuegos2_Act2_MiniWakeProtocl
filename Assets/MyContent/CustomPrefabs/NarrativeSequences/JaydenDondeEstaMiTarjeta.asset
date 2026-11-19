@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6060832cc94c388f2b6d634a4eb1a5, type: 3}
+  m_Name: JaydenDondeEstaMiTarjeta
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
+  lines:
+  - speaker: Jayden
+    text: "Si quiero llegar al puente necesito mi tarjeta de identificaci\xF3n."
+    duration: 6
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "Mierda.... no est\xE1.... juraria que la ten\xEDa en el bolsillo cuando
+      entr\xE9 en la c\xE1psula de hibernaci\xF3n."
+    duration: 6
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  blockPlayerControl: 1

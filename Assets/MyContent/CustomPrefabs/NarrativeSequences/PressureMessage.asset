@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
   lines:
   - speaker: Computadora
-    text: Peligro, pasillo despresurizado.
+    text: "Peligro, pasillo con sobrepresi\xF3n."
     duration: 3
     nameColor: {r: 0.9716981, g: 0.3987629, b: 0.3987629, a: 1}
   - speaker: Computadora
     text: "El acceso permanecer\xE1 cerrado hasta que se igua\nle la presi\xF3n."
     duration: 4
     nameColor: {r: 0.9716981, g: 0.3987629, b: 0.3987629, a: 1}
-  blockPlayerControl: 0
+  - speaker: Computadora
+    text: "Mantenga accionada la v\xE1lvula de purga para igualar la presi\xF3n y
+      desbloquear la puerta"
+    duration: 4
+    nameColor: {r: 0.9716981, g: 0.3987629, b: 0.3987629, a: 1}
+  blockPlayerControl: 1

@@ -18,7 +18,7 @@ MonoBehaviour:
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden
-    text: "\xBFDoctor? \u2026\xBFYa puedo salir de la c\xE1psula?"
+    text: "\xBFDoctor? \u2026 acabo de salir de la c\xE1psula"
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden
@@ -35,7 +35,8 @@ MonoBehaviour:
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden
-    text: "\xBFColisi\xF3n? \xBFCu\xE1nto tiempo lleva apareciendo ese aviso?"
+    text: "\xBFColisi\xF3n? \xBFEn menos de 10 minutos?  \xBFCu\xE1nto tiempo lleva
+      apareciendo ese aviso? \xBFDonde est\xE1 todo el mundo?"
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden

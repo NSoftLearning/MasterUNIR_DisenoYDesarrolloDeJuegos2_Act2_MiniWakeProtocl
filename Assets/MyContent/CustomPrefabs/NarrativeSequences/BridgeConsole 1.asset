@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6060832cc94c388f2b6d634a4eb1a5, type: 3}
+  m_Name: BridgeConsole 1
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
+  lines:
+  - speaker: Computadora de la nave
+    text: "Correcci\xF3n de rumbo bloqueada. Inserte los datos de navegaci\xF3n y
+      el cartucho de claves del capit\xE1n en los lectores de la consola"
+    duration: 8
+    nameColor: {r: 0, g: 1, b: 0.19270587, a: 1}
+  - speaker: Computadora de la nave
+    text: "Datos de navegaci\xF3n: retirados para la \xFAltima reuni\xF3n en la briefing
+      room. Devoluci\xF3n pendiente"
+    duration: 8
+    nameColor: {r: 0, g: 1, b: 0.19270587, a: 1}
+  - speaker: Computadora de la nave
+    text: "Claves de autorizaci\xF3n: bajo custodia del capit\xE1n Emerson, en su
+      camarote"
+    duration: 8
+    nameColor: {r: 0, g: 1, b: 0.19270587, a: 1}
+  - speaker: Computadora de la nave
+    text: Una vez instalados ambos cartuchos, confirme el cambio de rumbo en el control
+      central
+    duration: 8
+    nameColor: {r: 0, g: 1, b: 0.19270587, a: 1}
+  blockPlayerControl: 1

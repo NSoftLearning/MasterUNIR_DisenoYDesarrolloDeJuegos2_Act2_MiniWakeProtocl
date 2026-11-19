@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using Zenject;
 
-namespace Modules.ShipSystems.Private
+namespace MiniControllers
 {
     public class SequenceController : MonoBehaviour
     {

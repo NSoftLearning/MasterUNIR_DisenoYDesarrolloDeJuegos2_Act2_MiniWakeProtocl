@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ToAloneInTheLIfeboat
   m_EditorClassIdentifier: Assembly-CSharp::MusicTransitionData
   clip: {fileID: 8300000, guid: 410563c8fe0c0614cb249e9e0aa9ddfc, type: 3}
-  transitionMode: 0
-  startTime: 0
+  transitionMode: 1
+  startTime: 2
   blendDuration: 5

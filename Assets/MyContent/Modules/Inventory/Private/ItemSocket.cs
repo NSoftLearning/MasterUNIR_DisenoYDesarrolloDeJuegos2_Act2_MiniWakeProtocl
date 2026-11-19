@@ -3,6 +3,7 @@ using Modules.Interaction.API;
 using Modules.Inventory.API;
 using Unity.Profiling.LowLevel;
 using UnityEngine;
+using UnityEngine.Events;
 using Zenject;
 
 namespace Modules.Inventory.Private
@@ -15,6 +16,7 @@ namespace Modules.Inventory.Private
         [SerializeField] private string prompt = "Instalar cartucho";
         [SerializeField] private string installedPrompt = "Cartucho instalado";
         [SerializeField] private Transform modelAnchor;
+        [SerializeField] private UnityEvent itemInstalled;
         private IInventory _inventory;
         private IInteractable _interactable;
 
@@ -73,6 +75,7 @@ namespace Modules.Inventory.Private
 
             IsInstalled = true;
             Installed?.Invoke();
+            itemInstalled.Invoke();
         }
     }
 }

@@ -1,25 +1,22 @@
 {
   "dependencies": {
     "com.cysharp.messagepipe": {
-      "version": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe#1.8.2",
+      "version": "file:com.cysharp.messagepipe",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "58516c36d4465a7b6396b7850a4ad7e03326998c"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.cysharp.messagepipe.zenject": {
-      "version": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe.Zenject#1.8.2",
+      "version": "file:com.cysharp.messagepipe.zenject",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "58516c36d4465a7b6396b7850a4ad7e03326998c"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.cysharp.unitask": {
-      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "version": "file:com.cysharp.unitask",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "a77a1b4a89824fb6df293099de3060daf2a432c1"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",

@@ -34,7 +34,7 @@ MonoBehaviour:
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden
-    text: "Vamos\u2026 \xC1brete"
+    text: "Vamos\u2026 \xC1brete S\xE9samo"
     duration: 8
     nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
   - speaker: Jayden

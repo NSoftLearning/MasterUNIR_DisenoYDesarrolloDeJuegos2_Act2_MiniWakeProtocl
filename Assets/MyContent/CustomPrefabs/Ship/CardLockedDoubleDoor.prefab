@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Modules.Inventory.Private.ItemRequiredInteractable
   dataProvider: {fileID: 4145009127755004828}
   requiredItem: {fileID: 11400000, guid: e75dc4c84079aa847a6277abf4a37701, type: 2}
-  failureMessage: Necesito la tarjeta verde
+  failureMessage: "Necesito mi identificaci\xF3n"
   feedbackDuration: 3
 --- !u!114 &4145009127755004828
 MonoBehaviour:

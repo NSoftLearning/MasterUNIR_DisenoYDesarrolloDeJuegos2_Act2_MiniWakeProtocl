@@ -1,0 +1,21 @@
+{
+  "name": "com.cysharp.messagepipe.zenject",
+  "displayName": "MessagePipe.Zenject",
+  "author": {
+    "name": "Cysharp, Inc.",
+    "url": "https://cysharp.co.jp/en/"
+  },
+  "version": "1.8.2",
+  "unity": "2018.4",
+  "description": "MessagePipe Runtime support for Zenject.",
+  "keywords": [
+    "pubsub",
+    "event",
+    "Scripting",
+    "DI"
+  ],
+  "license": "MIT",
+  "category": "Scripting",
+  "dependencies": {},
+  "_fingerprint": "c755a5a7d25c1d94f7f07ebd07980c3e1ca131ff"
+}

@@ -12,6 +12,7 @@ namespace Modules.NarrativePlayback.Private
 {
     public class NarrativeView : MonoBehaviour,
         INarrativePlaybackControl,
+        IManualNarrativePlaybackControl,
         IDomainEventHandler<NarrativeRequested>
     {
         [SerializeField] private GameObject narrativePanel;
@@ -26,7 +27,8 @@ namespace Modules.NarrativePlayback.Private
         private int _lineIndex;
         private Tween _lineTimer;
         private bool _suspended;
-
+        private bool _manualPlayback;
+        
         [Inject]
         private void Construct(DomainEventBus eventBus)
         {
@@ -59,7 +61,7 @@ namespace Modules.NarrativePlayback.Private
 
         private void PlayNextSequence()
         {
-            if (_suspended)
+            if (_suspended || _manualPlayback)
                 return;
 
             if (_pending.Count == 0)
@@ -102,6 +104,9 @@ namespace Modules.NarrativePlayback.Private
 
         private void AdvanceLine()
         {
+            if (_manualPlayback || _suspended || _currentSequence == null)
+                return;
+            
             _lineTimer?.Kill();
             _lineTimer = null;
 
@@ -133,11 +138,18 @@ namespace Modules.NarrativePlayback.Private
         {
             _suspended = false;
 
+            if (_manualPlayback)
+                return;
             if (_currentSequence == null)
             {
                 PlayNextSequence();
                 return;
             }
+            
+            NarrativeLine line = _currentSequence.Lines[_lineIndex];
+            speakerText.text = line.Speaker;
+            speakerText.color = line.NameColor;
+            lineText.text = line.Text;
 
             narrativePanel.SetActive(true);
             advanceNarrative.action.Enable();
@@ -163,8 +175,43 @@ namespace Modules.NarrativePlayback.Private
             _pending.Clear();
             _currentSequence = null;
             _suspended = false;
+            _manualPlayback = false;
 
             ClearView();
+        }
+
+        public void BeginManualPlayback()
+        {
+            _manualPlayback = true;
+
+            _lineTimer?.Pause();
+            advanceNarrative.action.Disable();
+
+            ClearView();
+        }
+
+        public void ShowManualLine(NarrativeLine line)
+        {
+            speakerText.text = line.Speaker;
+            speakerText.color = line.NameColor;
+            lineText.text = line.Text;
+
+            narrativePanel.SetActive(true);
+        }
+
+        public void HideManualLine()
+        {
+            ClearView();
+        }
+
+        public void EndManualPlayback()
+        {
+            _manualPlayback = false;
+
+            ClearView();
+
+            if (!_suspended)
+                ResumePlayback();
         }
     }
 }

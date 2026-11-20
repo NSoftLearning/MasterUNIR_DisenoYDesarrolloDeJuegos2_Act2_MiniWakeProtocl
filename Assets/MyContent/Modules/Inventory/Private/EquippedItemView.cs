@@ -33,6 +33,10 @@ namespace Modules.Inventory.Private
             if (item == null)
                 return;
             _model = Instantiate(item.ModelPrefab, transform, false);
+            
+            foreach (Transform child in _model.GetComponentsInChildren<Transform>(true))
+                child.gameObject.layer = gameObject.layer;
+            
             _model.transform.SetLocalPositionAndRotation(
                 item.EquippedPositionOffset, 
                 Quaternion.Euler(item.EquippedRotationOffset));

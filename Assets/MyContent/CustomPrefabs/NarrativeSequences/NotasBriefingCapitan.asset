@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6060832cc94c388f2b6d634a4eb1a5, type: 3}
+  m_Name: NotasBriefingCapitan
+  m_EditorClassIdentifier: Assembly-CSharp::Modules.NarrativePlayback.API.NarrativeSequence
+  lines:
+  - speaker: Jayden
+    text: "Son algunas notas del capitan para la reunion semanal con la tripulaci\xF3n.
+      Dice:"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: 
+    text: "Tripulaci\xF3n: gracias por el esfuerzo de estos \xFAltimos turnos. S\xE9
+      que las condiciones no han sido f\xE1ciles. "
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: Dicho esto, hay algunas costumbres que debemos corregir
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: 1. Retirad las tazas de las consolas al terminar el turno
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "2. Dejad de utilizar los botiquines para jugar a esconder cosas. Est\xE1n
+      destinados exclusivamente a material sanitario"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "3. Las incidencias de navegaci\xF3n deben registrarse antes del cambio
+      de guardia"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  - speaker: Jayden
+    text: "Conf\xEDo en vosotros. Un poco de orden nos har\xE1 el viaje m\xE1s llevadero
+      a todos\n"
+    duration: 8
+    nameColor: {r: 0.6224805, g: 0.41037738, b: 1, a: 1}
+  blockPlayerControl: 1

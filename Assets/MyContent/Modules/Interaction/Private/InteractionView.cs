@@ -14,7 +14,8 @@ public class InteractionView : MonoBehaviour,
 {
 
     [SerializeField] private Image _crosshair;
-    [SerializeField] private TMP_Text _promptTMP; 
+    [SerializeField] private TMP_Text _promptTMP;
+    [SerializeField] private GameObject _promptContainer;
     [SerializeField] private Sprite _normalCrosshair;
     [SerializeField] private Sprite _selectedCrosshair;
 
@@ -27,16 +28,23 @@ public class InteractionView : MonoBehaviour,
         _eventBus = eventBus;
     }
 
+    private void Start()
+    {
+        _promptContainer.SetActive(false);
+    }
+
     public void Handle(InteractableSelected domainEvent)
     {
         _crosshair.sprite = _selectedCrosshair;
         _promptTMP.text = domainEvent.interactable.InteractionPrompt;
+        _promptContainer.SetActive(true);
     }
 
     public void Handle(InteractableUnselected domainEvent)
     {
         _crosshair.sprite = _normalCrosshair;
         _promptTMP.text = string.Empty;
+        _promptContainer.SetActive(false);
     }
     
     private void OnEnable()

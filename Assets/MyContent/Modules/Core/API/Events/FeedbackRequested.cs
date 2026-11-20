@@ -1,6 +1,6 @@
 ﻿using Modules.EventHandling.API;
 
-namespace Modules.Core.API
+namespace Modules.Core.API.Events
 {
     public class FeedbackRequested : DomainEventBase
     {

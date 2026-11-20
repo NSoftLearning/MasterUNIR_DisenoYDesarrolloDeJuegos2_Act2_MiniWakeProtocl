@@ -1,4 +1,5 @@
 using Modules.Core.API;
+using Modules.Core.API.Events;
 using Modules.EventHandling.API;
 using Modules.Interaction.API;
 using Modules.NarrativePlayback.API;

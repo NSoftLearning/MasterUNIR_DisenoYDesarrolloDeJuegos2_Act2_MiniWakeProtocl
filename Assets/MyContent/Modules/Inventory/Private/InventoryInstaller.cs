@@ -1,4 +1,4 @@
-﻿using Modules.Inventory.API;
+﻿ using Modules.Inventory.API;
 using UnityEngine;
 using Zenject;
 

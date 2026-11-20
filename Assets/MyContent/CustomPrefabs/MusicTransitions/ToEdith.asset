@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ToEdith
   m_EditorClassIdentifier: Assembly-CSharp::MusicTransitionData
   clip: {fileID: 8300000, guid: 85831337b18b6d745a7efe02dabfde48, type: 3}
-  transitionMode: 0
+  transitionMode: 1
   startTime: 0
-  blendDuration: 0.1
+  blendDuration: 10
